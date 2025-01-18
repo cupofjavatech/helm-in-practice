@@ -1,0 +1,4 @@
+Create Configmap 
+Deployment (IronFist-deploy)
+Servier (IronFist-Service)
+helm install <release-name> <chart-location>
