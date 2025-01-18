@@ -1,0 +1,10 @@
+myvalue: ironfist-my-custom-value
+replicasCount: 1
+app:
+  name: ironfist
+  imageName: cupofjavatech/iron-fist
+  imageTag: v1
+
+service:
+  containerPort: 8081
+  targetPort: 8081

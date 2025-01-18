@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: release-object-configmap
+data:
+  ReleaseObject: {{ .Release }}
+  ReleaseName: {{ .Release.Name }}
+  ReleaseNameSpace: {{ .Release.Namespace }}
+  ReleaseIsInstall: {{ .Release.IsInstall }}
+  ReleaseIsUpgrade: {{ .Release.IsUpgrade }}
+  ReleaseRevision: {{ .Release.Revision }}
+  ReleaseService: {{ .Release.Service }}
