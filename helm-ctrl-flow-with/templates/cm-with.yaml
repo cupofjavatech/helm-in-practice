@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: with-flow-control-configmap
+data:
+  {{- $chartName := .Chart.Name }}
+  {{- with .Values.favorite }}
+  drink: {{ .drink }}
+  food: {{ .food }}
+  fruit: {{ .fruit }}
+  ReleaseName: {{ $.Release.Name }}
+  ChartName: {{ $chartName }}
+  {{- end }}
+  {{- with .Values.Service }}
+{{ toYaml . | indent 2 }}
+  {{- end }}

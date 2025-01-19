@@ -1,0 +1,9 @@
+Service:
+  internalPort : 8080
+  targetPort : 8080
+
+favorite:
+  wantOrange: true
+  drink: orange-juice
+  food: pizza
+  fruit: Banana
