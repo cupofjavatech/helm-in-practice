@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: range1-flow-control-configmap
+data:
+  {{- range $index, $topping  := .Values.pizzaToppings }}
+  {{ $index }}: {{ $topping | quote }}
+  {{- end }}
+  {{- range $key, $val := .Values.MyChart  }}
+  {{ $key }}: {{ $val }}
+  {{- end }}
+  numbers: |-
+  {{- range tuple "one" "two" "three" }}
+    - {{ . }}
+  {{- end }}

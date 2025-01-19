@@ -1,0 +1,11 @@
+{{- range $key, $state := .Values.India }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: range2-configmap-{{ $key | lower}}
+data:
+  {{- range $key1, $stateArea := $state }}
+  {{ $key1 }}: {{ $stateArea }}
+  {{- end }}
+---
+{{- end }}

@@ -1,0 +1,22 @@
+pizzaToppings:
+  - mushrooms
+  - cheese
+  - peppers
+  - onions
+
+MyChart:
+  Image : cupofjavatech/redhood
+  Tag : 0.0.1
+  DeploymentName: redhood-deploy
+  PodName: redhood-pod
+
+# Generage Multiple ConfigMap
+India:
+  Maharastra:
+    District: Aurangbad
+    City: Pune
+    Village: Sangli
+  Rajastan:
+    District: Ajmer
+    City: Jaipur
+    VIllage: Kota
