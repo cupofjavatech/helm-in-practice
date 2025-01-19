@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: fun-specing-configmap
+data:
+  normalString: "left     {{ .Release.Name }}     Right"
+  leftTrim: "left     {{- .Release.Name }}     Right"
+  rightTrim: "left     {{ .Release.Name -}}     Right"
+  bothSideTrim: "left     {{- .Release.Name -}}     Right"

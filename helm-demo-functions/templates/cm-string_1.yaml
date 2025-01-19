@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: fun-string-configmap
+data:
+  myvalue: "some-value"
+  {{/* Comments */}}
+  internalPort_1: {{ .Values.Service.internalPort | quote }}
+  internalPort_2: {{ quote .Values.Service.internalPort  }}
+  podName: {{ .Values.MyChart.PodName | quote | upper }}
+  defaulValue: {{ .Values.MyChart.useDefault | default "some-default-value" }}

@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: fun-indent-configmap
+data:
+  indent2: indent2-{{- .Values.favorite.drink | indent 2 }}
+  indent4: indent4-{{ .Values.favorite.drink | indent 4 }}
+  indent4: "indent4-{{ .Values.favorite.drink | nindent 4 }}"
