@@ -1,0 +1,5 @@
+RedHood:
+  Image : cupofjavatech/redhood
+  Tag : 0.0.1
+  DeploymentName: redhood-deploy
+  PodName: redhood-pod
