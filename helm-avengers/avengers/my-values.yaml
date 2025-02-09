@@ -1,0 +1,8 @@
+ironfist:
+  service:
+    containerPort: 8083
+    targetPort: 8083
+
+
+redhood:
+  replicaCount: 10
